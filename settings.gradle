@@ -1,0 +1,2 @@
+include ':app', ':annotationn', ':compiler', ':api'
+rootProject.name='AnnotationProcessorStudy'

@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.google.auto.service:auto-service:1.0-rc7' //自动注册注解处理器
+    implementation 'com.squareup:javapoet:1.13.0' //javapoet代码生成框架
+    implementation project(':annotationn') //依赖注解模块
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
